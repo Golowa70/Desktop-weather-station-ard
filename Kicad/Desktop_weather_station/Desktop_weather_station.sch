@@ -1,0 +1,105 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TCRT5000:TCRT5000 U1
+U 1 1 604BC543
+P 3150 2550
+F 0 "U1" H 3150 2915 50  0000 C CNN
+F 1 "TCRT5000" H 3150 2824 50  0000 C CNN
+F 2 "TCRT5000:OPTO_TCRT5000" H 3150 2550 50  0001 L BNN
+F 3 "" H 3150 2550 50  0001 L BNN
+F 4 "Manufacturer recommendations" H 3150 2550 50  0001 L BNN "STANDARD"
+F 5 "1.7" H 3150 2550 50  0001 L BNN "PARTREV"
+F 6 "7.2mm" H 3150 2550 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+F 7 "Vishay" H 3150 2550 50  0001 L BNN "MANUFACTURER"
+	1    3150 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 604BD384
+P 3450 3000
+F 0 "#PWR01" H 3450 2750 50  0001 C CNN
+F 1 "GND" H 3455 2827 50  0000 C CNN
+F 2 "" H 3450 3000 50  0001 C CNN
+F 3 "" H 3450 3000 50  0001 C CNN
+	1    3450 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2650 3450 2900
+Wire Wire Line
+	2850 2650 2850 2900
+Wire Wire Line
+	2850 2900 3450 2900
+Connection ~ 3450 2900
+Wire Wire Line
+	3450 2900 3450 3000
+$Comp
+L Device:R R1
+U 1 1 604BE61A
+P 2650 2200
+F 0 "R1" H 2720 2246 50  0000 L CNN
+F 1 "470R" H 2720 2155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2580 2200 50  0001 C CNN
+F 3 "~" H 2650 2200 50  0001 C CNN
+	1    2650 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 604BED5D
+P 3700 2200
+F 0 "R2" H 3770 2246 50  0000 L CNN
+F 1 "100k" H 3770 2155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3630 2200 50  0001 C CNN
+F 3 "~" H 3700 2200 50  0001 C CNN
+	1    3700 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2450 2650 2450
+Wire Wire Line
+	2650 2450 2650 2350
+Wire Wire Line
+	3450 2450 3700 2450
+Wire Wire Line
+	3700 2450 3700 2350
+$Comp
+L power:+5V #PWR02
+U 1 1 604C0B38
+P 3700 1850
+F 0 "#PWR02" H 3700 1700 50  0001 C CNN
+F 1 "+5V" H 3715 2023 50  0000 C CNN
+F 2 "" H 3700 1850 50  0001 C CNN
+F 3 "" H 3700 1850 50  0001 C CNN
+	1    3700 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 2050 3700 1850
+Text GLabel 2350 1750 0    50   Input ~ 0
+proximity_sensor_led
+Wire Wire Line
+	2650 2050 2650 1750
+Wire Wire Line
+	2650 1750 2350 1750
+Text GLabel 4000 2450 2    50   Output ~ 0
+proximity_sensor_to_mcu
+Wire Wire Line
+	4000 2450 3700 2450
+Connection ~ 3700 2450
+$EndSCHEMATC
