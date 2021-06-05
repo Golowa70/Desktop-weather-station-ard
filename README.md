@@ -1,2 +1,2 @@
-# Desktop weather station ard
+# Desktop weather station arduino
 Desktop weather station 
