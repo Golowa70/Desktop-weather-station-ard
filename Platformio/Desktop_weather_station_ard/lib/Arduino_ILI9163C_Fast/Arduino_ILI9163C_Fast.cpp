@@ -245,7 +245,7 @@ void Arduino_ILI9163C::setRotation(uint8_t m)
 void Arduino_ILI9163C::setAddrWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1) 
 {
   uint16_t xs = x0+2, xe = x1+2; //для китайских дисплеев нужно добавить (x)+2 (y)+3
-  uint16_t ys = y0+3, ye = y1+3;
+  uint16_t ys = y0+1, ye = y1+1;
 
   CS_ACTIVE;
   SPI_START;
